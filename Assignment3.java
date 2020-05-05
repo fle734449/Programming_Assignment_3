@@ -69,15 +69,15 @@ public class Assignment3 {
 			}
 		}
 				
-		sub1 = 0;
-		int sub2 = 0;
+		int left = 0;
+		int right = 0;
 		for(int k = start; k < wall; k++) {
-			sub1 += sections[k];
+			left += sections[k];
 		}
 		for(int k = wall; k < end; k++) {
-			sub2 += sections[k];
+			right += sections[k];
 		}
-		return Math.min(sub1 + maxFruit(sections, start, wall), sub2 + maxFruit(sections, wall, end));
+		return Math.min(left + maxFruit(sections, start, wall), right + maxFruit(sections, wall, end));
 		
 	}
 }
